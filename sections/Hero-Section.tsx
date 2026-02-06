@@ -53,7 +53,7 @@ export default function HeroSection() {
         >
             <button
               type="button"
-              className="w-full sm:w-auto bg-white text-purple-300 hover:bg-purple-100 hover:scale-110 font-bold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-transform duration-200 text-sm sm:text-base"
+              className="w-full sm:w-auto bg-white text-purple-500 hover:bg-purple-100 hover:scale-110 font-bold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-transform duration-200 text-sm sm:text-base"
               onClick={() => {
                 const portfolioSection = document.getElementById('portfolio');
                 if (portfolioSection) {

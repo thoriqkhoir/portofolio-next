@@ -1,15 +1,27 @@
 "use client"
+import { useEffect, useMemo, useState } from "react";
 import ChromaGrid, { ChromaItem } from "@/components/bits/ChromaGrid";
 import Magnet from "@/components/bits/Magnet";
 import ScrollFloat from "@/components/bits/ScrollFloat";
 export default function PortfolioSection() {
+  const [showAll, setShowAll] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 639px)");
+    const update = () => setIsSmallScreen(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
   const projects = [
   {
     id: 1,
     title: "SmartPPA",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "API", "Tailwind"],
-    image: "/assets/images/smartppa.png",
+    image: "/assets/images/smartppa.webp",
     github: "#",
     live: "https://smartppa.malangkab.go.id/"
   },
@@ -18,7 +30,7 @@ export default function PortfolioSection() {
     title: "TaxLearning.id",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "Tailwind"],
-    image: "/assets/images/taxlearning.png",
+    image: "/assets/images/taxlearning.webp",
     github: "#",
     live: "https://taxlearning.id/"
   },
@@ -27,7 +39,7 @@ export default function PortfolioSection() {
     title: "SmartCounting",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Payment Gateway", "Tailwind"],
-    image: "/assets/images/smartcounting.png",
+    image: "/assets/images/smartcounting.webp",
     github: "#",
     live: "https://smartcounting.id/"
   },
@@ -36,7 +48,7 @@ export default function PortfolioSection() {
     title: "Biinspirainstitute",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["WordPress", "Payment Gateway", "Tailwind"],
-    image: "/assets/images/biinspira.png",
+    image: "/assets/images/biinspira.webp",
     github: "#",
     live: "https://biinspirainstitute.com/"
   },
@@ -45,7 +57,7 @@ export default function PortfolioSection() {
     title: "Aksademy.id",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
-    image: "/assets/images/aksademy.png",
+    image: "/assets/images/aksademy.webp",
     github: "#",
     live: "https://aksademy.id/"
   },
@@ -54,7 +66,7 @@ export default function PortfolioSection() {
     title: "Skillgrow.id",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
-    image: "/assets/images/skillgrow.png",
+    image: "/assets/images/skillgrow.webp",
     github: "#",
     live: "https://skillgrow.id/"
   },
@@ -63,7 +75,7 @@ export default function PortfolioSection() {
     title: "Sekolahpajak.id",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
-    image: "/assets/images/sekolahpajak.png",
+    image: "/assets/images/sekolahpajak.webp",
     github: "#",
     live: "https://sekolahpajak.id/"
   },
@@ -72,7 +84,7 @@ export default function PortfolioSection() {
     title: "Talenta.id",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
-    image: "/assets/images/talenta.png",
+    image: "/assets/images/talenta.webp",
     github: "#",
     live: "https://talentaedu.id/"
   },
@@ -81,7 +93,7 @@ export default function PortfolioSection() {
     title: "Ppppmi.id",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Tailwind"],
-    image: "/assets/images/p4mi.png",
+    image: "/assets/images/p4mi.webp",
     github: "#",
     live: "https://ppppmi.id/"
   },
@@ -90,7 +102,7 @@ export default function PortfolioSection() {
     title: "Lpkppi",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Next.js", "Tailwind"],
-    image: "/assets/images/lpkppi.png",
+    image: "/assets/images/lpkppi.webp",
     github: "#",
     live: "https://lpkppi.vercel.app/"
   },
@@ -99,7 +111,7 @@ export default function PortfolioSection() {
     title: "Taxmateschool",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "Tailwind"],
-    image: "/assets/images/taxmateschool.png",
+    image: "/assets/images/taxmateschool.webp",
     github: "#",
     live: "https://taxmateschool.id/"
   },
@@ -108,7 +120,7 @@ export default function PortfolioSection() {
     title: "ArsaCendikia",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
-    image: "/assets/images/arsacendikia.png",
+    image: "/assets/images/arsacendikia.webp",
     github: "#",
     live: "https://arsacendekia.com/"
   }
@@ -117,15 +129,20 @@ export default function PortfolioSection() {
 
 ];
 
-const chromaItems: ChromaItem[] = projects.map((project) => ({
-    image: project.image,
-    title: project.title,
-    subtitle: project.description,
-    handle: project.technologies.join(', '),
-    borderColor: '#8B5CF6',
-    gradient: 'linear-gradient(145deg, #8B5CF6, #000)',
-    url: project.live
-  }));
+  const visibleProjects = useMemo(
+    () => (isSmallScreen && !showAll ? projects.slice(0, 4) : projects),
+    [isSmallScreen, showAll, projects]
+  );
+
+  const chromaItems: ChromaItem[] = visibleProjects.map((project) => ({
+      image: project.image,
+      title: project.title,
+      subtitle: project.description,
+      handle: project.technologies.join(', '),
+      borderColor: '#8B5CF6',
+      gradient: 'linear-gradient(145deg, #8B5CF6, #000)',
+      url: project.live
+    }));
 
   return (
     <section id="portfolio" className="min-h-screen py-12 sm:py-20">
@@ -156,17 +173,19 @@ const chromaItems: ChromaItem[] = projects.map((project) => ({
         />
 
         
-        <div className="text-center mt-8 sm:mt-12">
-          <Magnet padding={300} disabled={false} magnetStrength={10}>
-          <button
-            type="button"
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
-            onClick={() => alert('Semua project sudah ditampilkan.')}
-          >
-            View All Projects
-          </button>
-          </Magnet>
-        </div>
+        {isSmallScreen && !showAll && (
+          <div className="text-center mt-8 sm:mt-12">
+            <Magnet padding={300} disabled={false} magnetStrength={10}>
+            <button
+              type="button"
+              className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
+              onClick={() => setShowAll(true)}
+            >
+              View All Projects
+            </button>
+            </Magnet>
+          </div>
+        )}
       
       </div>
     </section>
