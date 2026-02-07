@@ -99,7 +99,7 @@ export default function HeroSection() {
           handle="thoriqkhoir"
           status="Online"
           contactText="Contact Me"
-          avatarUrl="/assets/images/photo2.jpeg"
+          avatarUrl="/assets/images/photo2.webp"
           showUserInfo
           enableTilt={true}
           enableMobileTilt
