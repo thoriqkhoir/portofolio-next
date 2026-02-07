@@ -19,7 +19,7 @@ export default function PortfolioSection() {
   {
     id: 1,
     title: "SmartPPA",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for managing pre-wedding rules at kabupaten Malang.",
     technologies: ["Laravel", "React", "Inertia", "API", "Tailwind"],
     image: "/assets/images/smartppa.webp",
     github: "#",
@@ -28,7 +28,7 @@ export default function PortfolioSection() {
   {
     id: 2,
     title: "TaxLearning.id",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for online tax education and training.",
     technologies: ["Laravel", "React", "Inertia", "Tailwind"],
     image: "/assets/images/taxlearning.webp",
     github: "#",
@@ -37,7 +37,7 @@ export default function PortfolioSection() {
   {
     id: 3,
     title: "SmartCounting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for counting and management education",
     technologies: ["Laravel", "React", "Payment Gateway", "Tailwind"],
     image: "/assets/images/smartcounting.webp",
     github: "#",
@@ -46,7 +46,7 @@ export default function PortfolioSection() {
   {
     id: 4,
     title: "Biinspirainstitute",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for finance education.",
     technologies: ["WordPress", "Payment Gateway", "Tailwind"],
     image: "/assets/images/biinspira.webp",
     github: "#",
@@ -55,7 +55,7 @@ export default function PortfolioSection() {
   {
     id: 5,
     title: "Aksademy.id",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for online education and training.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
     image: "/assets/images/aksademy.webp",
     github: "#",
@@ -64,7 +64,7 @@ export default function PortfolioSection() {
   {
     id: 6,
     title: "Skillgrow.id",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for skill development and growth.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
     image: "/assets/images/skillgrow.webp",
     github: "#",
@@ -73,7 +73,7 @@ export default function PortfolioSection() {
   {
     id: 7,
     title: "Sekolahpajak.id",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for tax education and training.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
     image: "/assets/images/sekolahpajak.webp",
     github: "#",
@@ -82,7 +82,7 @@ export default function PortfolioSection() {
   {
     id: 8,
     title: "Talenta.id",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Web-based application for talent development and management.",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
     image: "/assets/images/talenta.webp",
     github: "#",
@@ -91,7 +91,7 @@ export default function PortfolioSection() {
   {
     id: 9,
     title: "Ppppmi.id",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "landingpage for Indonesian tax professional association.",
     technologies: ["Laravel", "React", "Tailwind"],
     image: "/assets/images/p4mi.webp",
     github: "#",
@@ -100,7 +100,7 @@ export default function PortfolioSection() {
   {
     id: 10,
     title: "Lpkppi",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "landingpage for LPKPPI training center.",
     technologies: ["Next.js", "Tailwind"],
     image: "/assets/images/lpkppi.webp",
     github: "#",
@@ -109,7 +109,7 @@ export default function PortfolioSection() {
   {
     id: 11,
     title: "Taxmateschool",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "web-based application for Tax education in seniors high school levels.",
     technologies: ["Laravel", "React", "Inertia", "Tailwind"],
     image: "/assets/images/taxmateschool.webp",
     github: "#",
@@ -118,7 +118,7 @@ export default function PortfolioSection() {
   {
     id: 12,
     title: "ArsaCendikia",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "web-based application for online education",
     technologies: ["Laravel", "React", "Inertia", "Payment Gateway", "Tailwind"],
     image: "/assets/images/arsacendikia.webp",
     github: "#",
