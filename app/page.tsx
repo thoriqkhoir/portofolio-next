@@ -25,7 +25,6 @@ export default function Home() {
         <WorkSection />
         <SelfDescription />
         <AboutSection />
-        <ExperienceSection />
         <StackSection />
         <ContactSection />
         <Footer />

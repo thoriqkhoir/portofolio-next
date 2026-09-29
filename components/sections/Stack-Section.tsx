@@ -70,7 +70,7 @@ export default function StackSection() {
                 fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.5rem, 3vw, 2.5rem)",
                 whiteSpace: "nowrap",
-                color: i % 4 === 0 ? "var(--accent)" : "var(--muted)",
+                color: i % 4 === 0 ? "#1e44c2" : "var(--muted)",
                 letterSpacing: "0.02em",
               }}
             >
@@ -98,7 +98,7 @@ export default function StackSection() {
                 fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.5rem, 3vw, 2.5rem)",
                 whiteSpace: "nowrap",
-                color: i % 5 === 2 ? "var(--accent)" : "var(--muted)",
+                color: i % 5 === 2 ? "#1e44c2" : "var(--muted)",
                 letterSpacing: "0.02em",
               }}
             >

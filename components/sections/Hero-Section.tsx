@@ -166,7 +166,7 @@ export default function HeroSection() {
           <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", textAlign: "right" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
               <span className="text-meta" style={{ fontSize: "0.68rem", lineHeight: 1.2, letterSpacing: "0.08em" }}>
-                BASED IN SURABAYA,
+                BASED IN MALANG,
               </span>
               <span className="text-meta" style={{ fontSize: "0.68rem", lineHeight: 1.2, letterSpacing: "0.08em", fontWeight: 600 }}>
                 INDONESIA (GMT+7)

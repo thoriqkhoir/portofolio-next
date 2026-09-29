@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function SelfDescription() {
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
-  const progressBarRef = useRef<HTMLDivElement>(null);
   const asteriskRef = useRef<SVGSVGElement>(null);
   const organicWaveRef = useRef<SVGSVGElement>(null);
   const ringRef = useRef<SVGSVGElement>(null);
@@ -19,7 +18,6 @@ export default function SelfDescription() {
     () => {
       const section = sectionRef.current;
       const track = trackRef.current;
-      const progressBar = progressBarRef.current;
       const asterisk = asteriskRef.current;
       const organicWave = organicWaveRef.current;
       const ring = ringRef.current;
@@ -54,17 +52,6 @@ export default function SelfDescription() {
           0
         );
 
-        // 2. Progress bar scale
-        if (progressBar) {
-          tl.to(
-            progressBar,
-            {
-              scaleX: 1,
-              ease: "none",
-            },
-            0
-          );
-        }
 
         // 3. Secondary subtle motion & parallax on decorative SVGs
         if (asterisk) {
@@ -820,30 +807,6 @@ export default function SelfDescription() {
         </div>
       </div>
 
-      {/* ─── BOTTOM PROGRESS BAR ─────────────────────────────────────── */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: "2px",
-          backgroundColor: "transparent",
-          zIndex: 20,
-        }}
-      >
-        <div
-          ref={progressBarRef}
-          style={{
-            height: "100%",
-            width: "100%",
-            backgroundColor: "#1e44c2",
-            transformOrigin: "left center",
-            transform: "scaleX(0)",
-            willChange: "transform",
-          }}
-        />
-      </div>
 
       <style>{`
         .aesthetic-outlined-text {

@@ -60,9 +60,9 @@ export default function ContactSection() {
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.background = "var(--accent)";
+                  el.style.background = "#1e44c2";
                   el.style.color = "var(--bg)";
-                  el.style.borderColor = "var(--accent)";
+                  el.style.borderColor = "#1e44c2";
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLElement;
@@ -169,7 +169,7 @@ export default function ContactSection() {
                   transition: "background 0.25s ease",
                   display: "inline-block",
                 }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--accent)")}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "#1e44c2")}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--fg)")}
                 data-magnetic
               >
