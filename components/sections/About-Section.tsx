@@ -38,7 +38,7 @@ export default function AboutSection() {
         >
           {/* Photo */}
           <ImageReveal
-            src="/assets/images/photo2.webp"
+            src="/assets/images/aku.HEIC"
             alt="Thoriq Khoir"
             className="about-image"
             style={{ width: "100%", aspectRatio: "3/4", borderRadius: "4px" }}
