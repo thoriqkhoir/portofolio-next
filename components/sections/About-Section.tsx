@@ -66,7 +66,7 @@ export default function AboutSection() {
               className="about-stats"
             >
               {[
-                { value: "1+", label: "Years experience" },
+                { value: "2+", label: "Years experience" },
                 { value: "10+", label: "Projects shipped" },
                 { value: "IDN", label: "Based in" },
                 { value: "∞", label: "Love for clean code" },
